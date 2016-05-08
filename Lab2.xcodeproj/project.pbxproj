@@ -23,7 +23,7 @@
 		23A4E3BD1CC422940052CC8C /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		23A4E3BF1CC422B30052CC8C /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		23A4E3C51CC4268C0052CC8C /* PlayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
-		23D86AF01CBDAB47000FC5D0 /* Lab1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D86AF01CBDAB47000FC5D0 /* Lab2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D86AF31CBDAB47000FC5D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23D86AF51CBDAB47000FC5D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		23D86AF81CBDAB47000FC5D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		23D86AE71CBDAB47000FC5D0 = {
 			isa = PBXGroup;
 			children = (
-				23D86AF21CBDAB47000FC5D0 /* Lab1 */,
+				23D86AF21CBDAB47000FC5D0 /* Lab2 */,
 				23D86AF11CBDAB47000FC5D0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +54,12 @@
 		23D86AF11CBDAB47000FC5D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				23D86AF01CBDAB47000FC5D0 /* Lab1.app */,
+				23D86AF01CBDAB47000FC5D0 /* Lab2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		23D86AF21CBDAB47000FC5D0 /* Lab1 */ = {
+		23D86AF21CBDAB47000FC5D0 /* Lab2 */ = {
 			isa = PBXGroup;
 			children = (
 				23A4E3C51CC4268C0052CC8C /* PlayerCell.swift */,
@@ -73,15 +73,16 @@
 				23A4E3BD1CC422940052CC8C /* Player.swift */,
 				23A4E3BF1CC422B30052CC8C /* SampleData.swift */,
 			);
+			name = Lab2;
 			path = Lab1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		23D86AEF1CBDAB47000FC5D0 /* Lab1 */ = {
+		23D86AEF1CBDAB47000FC5D0 /* Lab2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 23D86B021CBDAB48000FC5D0 /* Build configuration list for PBXNativeTarget "Lab1" */;
+			buildConfigurationList = 23D86B021CBDAB48000FC5D0 /* Build configuration list for PBXNativeTarget "Lab2" */;
 			buildPhases = (
 				23D86AEC1CBDAB47000FC5D0 /* Sources */,
 				23D86AED1CBDAB47000FC5D0 /* Frameworks */,
@@ -91,9 +92,9 @@
 			);
 			dependencies = (
 			);
-			name = Lab1;
+			name = Lab2;
 			productName = Lab1;
-			productReference = 23D86AF01CBDAB47000FC5D0 /* Lab1.app */;
+			productReference = 23D86AF01CBDAB47000FC5D0 /* Lab2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -111,7 +112,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 23D86AEB1CBDAB47000FC5D0 /* Build configuration list for PBXProject "Lab1" */;
+			buildConfigurationList = 23D86AEB1CBDAB47000FC5D0 /* Build configuration list for PBXProject "Lab2" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -124,7 +125,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				23D86AEF1CBDAB47000FC5D0 /* Lab1 */,
+				23D86AEF1CBDAB47000FC5D0 /* Lab2 */,
 			);
 		};
 /* End PBXProject section */
@@ -267,8 +268,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Lab1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oscarpan.ece158.Lab1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oscarpan.ece158.Lab2;
+				PRODUCT_NAME = Lab2;
 			};
 			name = Debug;
 		};
@@ -278,15 +279,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Lab1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oscarpan.ece158.Lab1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oscarpan.ece158.Lab2;
+				PRODUCT_NAME = Lab2;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		23D86AEB1CBDAB47000FC5D0 /* Build configuration list for PBXProject "Lab1" */ = {
+		23D86AEB1CBDAB47000FC5D0 /* Build configuration list for PBXProject "Lab2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23D86B001CBDAB48000FC5D0 /* Debug */,
@@ -295,7 +296,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		23D86B021CBDAB48000FC5D0 /* Build configuration list for PBXNativeTarget "Lab1" */ = {
+		23D86B021CBDAB48000FC5D0 /* Build configuration list for PBXNativeTarget "Lab2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23D86B031CBDAB48000FC5D0 /* Debug */,
