@@ -11,10 +11,16 @@ import UIKit
 class PlayerDetailsViewController: UITableViewController {
     
     var player:Player?
-
-    @IBOutlet weak var nameTextField: UITextField!
     
+    var game:String = "Chess" {
+        didSet {
+            detailLabel.text? = game
+        }
+    }
+    
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var detailLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +39,12 @@ class PlayerDetailsViewController: UITableViewController {
 
     
 
+    @IBAction func unwindWithSelectedGame(segue:UIStoryboardSegue) {
+        if let gamePickerViewController = segue.sourceViewController as? GamePickerViewController,
+            selectedGame = gamePickerViewController.selectedGame {
+            game = selectedGame
+        }
+    }
 
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -43,8 +55,24 @@ class PlayerDetailsViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SavePlayerDetail" {
-            player = Player(name: nameTextField.text!, game: "Chess", rating: 1)
+            player = Player(name: nameTextField.text, game:game, rating: 1)
         }
+        
+        if segue.identifier == "PickGame" {
+            if let gamePickerViewController = segue.destinationViewController as? GamePickerViewController {
+                gamePickerViewController.selectedGame = game
+            }
+        }
+    }
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        print("init PlayerDetailsViewController")
+        super.init(coder: aDecoder)
+    }
+    
+    deinit {
+        print("deinit PlayerDetailsViewController")
     }
 
     
