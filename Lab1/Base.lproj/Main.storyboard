@@ -155,7 +155,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="HKF-CR-xDB">
                             <connections>
-                                <segue destination="dbW-ZM-VtB" kind="unwind" unwindAction="savePlayerDetail:" id="h18-Tw-gXT"/>
+                                <segue destination="dbW-ZM-VtB" kind="unwind" identifier="SavePlayerDetail" unwindAction="savePlayerDetail:" id="h18-Tw-gXT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -9,6 +9,8 @@
 import UIKit
 
 class PlayerDetailsViewController: UITableViewController {
+    
+    var player:Player?
 
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -30,11 +32,7 @@ class PlayerDetailsViewController: UITableViewController {
     }
 
     
-    @IBAction func cancelToPlayersViewController(segue:UIStoryboardSegue) {
-    }
-    
-    @IBAction func savePlayerDetail(segue:UIStoryboardSegue) {
-    }
+
 
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -42,5 +40,12 @@ class PlayerDetailsViewController: UITableViewController {
             nameTextField.becomeFirstResponder()
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SavePlayerDetail" {
+            player = Player(name: nameTextField.text!, game: "Chess", rating: 1)
+        }
+    }
+
     
 }

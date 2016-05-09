@@ -46,6 +46,24 @@ class PlayersViewController: UITableViewController {
             cell.player = player
             return cell
     }
+    
+    
+    @IBAction func cancelToPlayersViewController(segue:UIStoryboardSegue) {
+    }
+    
+    @IBAction func savePlayerDetail(segue:UIStoryboardSegue) {
+        if let playerDetailsViewController = segue.sourceViewController as? PlayerDetailsViewController {
+            
+            //add the new player to the players array
+            if let player = playerDetailsViewController.player {
+                players.append(player)
+                
+                //update the tableView
+                let indexPath = NSIndexPath(forRow: players.count-1, inSection: 0)
+                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            }
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
