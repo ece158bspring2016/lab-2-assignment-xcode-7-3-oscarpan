@@ -144,6 +144,39 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Rating" id="7QX-Ph-K6y">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Meg-Wr-6Ws">
+                                        <rect key="frame" x="0.0" y="289" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Meg-Wr-6Ws" id="uiG-eF-0Im">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GH8-RS-3Kl">
+                                                    <rect key="frame" x="8" y="8" width="359" height="29"/>
+                                                    <segments>
+                                                        <segment title="1"/>
+                                                        <segment title="2"/>
+                                                        <segment title="3"/>
+                                                        <segment title="4"/>
+                                                        <segment title="5"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="ratingsFieldAction:" destination="jVO-EU-fBO" eventType="valueChanged" id="Mes-hk-pTr"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GH8-RS-3Kl" firstAttribute="leading" secondItem="uiG-eF-0Im" secondAttribute="leadingMargin" id="ACp-aj-WbY"/>
+                                                <constraint firstItem="GH8-RS-3Kl" firstAttribute="top" secondItem="uiG-eF-0Im" secondAttribute="topMargin" id="Sny-6E-jv4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GH8-RS-3Kl" secondAttribute="bottom" id="faI-F7-1Ve"/>
+                                                <constraint firstItem="GH8-RS-3Kl" firstAttribute="trailing" secondItem="uiG-eF-0Im" secondAttribute="trailingMargin" id="kih-8v-smW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="jVO-EU-fBO" id="Czo-yP-hIE"/>
@@ -165,6 +198,7 @@
                     <connections>
                         <outlet property="detailLabel" destination="LgV-hu-KIc" id="Hhz-Ve-JOL"/>
                         <outlet property="nameTextField" destination="Ng6-XT-hDZ" id="TDs-XJ-0q2"/>
+                        <outlet property="ratingsField" destination="GH8-RS-3Kl" id="Cqe-aB-2WS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4H-qG-7bA" userLabel="First Responder" sceneMemberID="firstResponder"/>

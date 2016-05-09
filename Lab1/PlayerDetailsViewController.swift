@@ -18,9 +18,12 @@ class PlayerDetailsViewController: UITableViewController {
         }
     }
     
+    var rating:Int = 1;
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var detailLabel: UILabel!
     
+    @IBOutlet weak var ratingsField: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +58,7 @@ class PlayerDetailsViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SavePlayerDetail" {
-            player = Player(name: nameTextField.text, game:game, rating: 1)
+            player = Player(name: nameTextField.text, game:game, rating: rating)
         }
         
         if segue.identifier == "PickGame" {
@@ -74,6 +77,13 @@ class PlayerDetailsViewController: UITableViewController {
     deinit {
         print("deinit PlayerDetailsViewController")
     }
+    
+    
+    @IBAction func ratingsFieldAction(sender: AnyObject) {
+        print(ratingsField.selectedSegmentIndex);
+        rating = ratingsField.selectedSegmentIndex + 1;
+    }
+
 
     
 }
